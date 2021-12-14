@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "welcome";
 });
-Route::get('/test',[\App\Http\Controllers\TestController::class,'test']);
+Route::get('/test',[TestController::class, 'test']);
