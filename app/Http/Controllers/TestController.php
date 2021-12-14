@@ -11,4 +11,8 @@ class TestController extends Controller
         return '123';
     }
 
+    public function webtest()
+    {
+        return view('pages.test');
+    }
 }

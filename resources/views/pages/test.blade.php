@@ -1,4 +1,6 @@
 @extends('layout.master')
+@section('title','測試用網站')
+@section('top')
 @section('content')
-    12121
+    <p>123</p>
 @endsection

@@ -17,3 +17,4 @@ Route::get('/', function () {
     return "welcome";
 });
 Route::get('/test',[TestController::class, 'test']);
+Route::get('/webtest',[TestController::class, 'webtest']);
