@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return "welcome";
-});
-Route::get('/test',[TestController::class, 'test']);
-Route::get('/webtest',[TestController::class, 'webtest']);
+
+Route::get('/test2',[TestController::class, 'test2'])->name('test2');
+Route::get('/',[TestController::class, 'webtest'])->name('webtest');

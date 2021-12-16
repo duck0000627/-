@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function test()
+    public function test2()
     {
-        return '123';
+        return view('pages.test2');
     }
 
     public function webtest()

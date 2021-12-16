@@ -1,4 +1,4 @@
 @extends('layout.master')
 @section('content')
-    <p>123</p>
+    <p>456</p>
 @endsection
