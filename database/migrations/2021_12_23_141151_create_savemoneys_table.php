@@ -13,8 +13,9 @@ class CreateSavemoneysTable extends Migration
      */
     public function up()
     {
-        Schema::create('savemoney', function (Blueprint $table) {
+        Schema::create('savemoneys', function (Blueprint $table) {
             $table->id();
+            $table->string('date');
             $table->string('item');
             $table->string('name');
             $table->string('price');
@@ -30,6 +31,6 @@ class CreateSavemoneysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('savemoney');
+        Schema::dropIfExists('savemoneys');
     }
 }

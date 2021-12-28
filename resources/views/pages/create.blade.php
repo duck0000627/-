@@ -3,9 +3,17 @@
     <div class="container">
         <form class="form-group" action="{{route('get_create_data')}}" method="post">
             @csrf
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary">收入</button>
+                <button type="button" class="btn btn-outline-primary">支出</button>
+            </div>
+            <div class="form-group">
+                <label class="h1">日期</label>
+                <input class="form-control col-sm-15" name="date" >
+            </div>
             <div class="form-group">
                 <label class="h1">類別</label>
-                <select class="form-control form-control-lg" id="FormControlSelect1" name="item">
+                <select class="form-control form-control-lg selectpicker" id="FormControlSelect1" name="item">
                     <option>食物</option>
                     <option>日用品</option>
                     <option>交通</option>

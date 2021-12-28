@@ -4,6 +4,7 @@
         <table class="table table-dark table-hover">
             <thead>
             <tr>
+                <th>日期</th>
                 <th class="fs-2">類別</th>
                 <th>名稱</th>
                 <th>價錢</th>
@@ -12,12 +13,13 @@
             <tbody>
             @foreach($data as $row)
                 <tr>
+                    <td class="col-sm-3">{{$row->date}}</td>
                     <td class="col-sm-3">{{$row->item}}</td>
                     <td class="col-sm-3">{{$row->name}}</td>
                     <td class="col-sm-3">{{$row->price}}</td>
                     <td class="col-sm-3">{{$row->tips}}</td>
                     <td class="col-sm-3">
-                        <button class="btn btn-outline-success text-nowrap" onclick=edit_data({{$row->id}}>修改</button>
+                        <button class="btn btn-outline-success text-nowrap" onclick=edit_data({{$row->id}})>修改</button>
                     </td>
                     <td>
                         <button class="btn btn-outline-danger text-nowrap" onclick=delete_data({{$row->id}})>刪除</button>
