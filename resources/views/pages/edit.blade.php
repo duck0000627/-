@@ -3,9 +3,15 @@
     <div class="container">
         <form class="form-group" action="{{route('get_edit_data')}}" method="post">
             @csrf
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary">收入</button>
-                <button type="button" class="btn btn-outline-primary">支出</button>
+{{--            <div class="btn-group" role="group" aria-label="Basic outlined example">--}}
+{{--                <button type="button" class="btn btn-outline-primary">收入</button>--}}
+{{--                <button type="button" class="btn btn-outline-primary">支出</button>--}}
+{{--            </div>--}}
+            <div class="form-group">
+                <select class="form-control form-control-lg selectpicker" id="FormControlSelect1" name="type">
+                    <option name="food">收入</option>
+                    <option name="necessary">支出</option>
+                </select>
             </div>
             <div class="form-group">
                 <label class="h1">日期</label>
@@ -14,11 +20,11 @@
             <div class="form-group">
                 <label class="h1">類別</label>
                 <select class="form-control form-control-lg" id="FormControlSelect1" name="item" value="{{$data->item}}">
-                    <option data-icon="fa-food">食物</option>
-                    <option>日用品</option>
-                    <option>交通</option>
-                    <option>娛樂</option>
-                    <option>生活繳費</option>
+                    <option name="food">食物</option>
+                    <option name="necessary">日用品</option>
+                    <option name="traffic">交通</option>
+                    <option name="game">娛樂</option>
+                    <option name="life">生活繳費</option>
                 </select>
             </div>
             <div class="form-group">

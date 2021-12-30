@@ -20,6 +20,7 @@ class todoController extends Controller
 
     public function get_create_data (Request $request)
     {
+        $type = $request -> get('type');
         $date = $request -> get('date');
         $item = $request -> get('item');
         $name = $request -> get('name');
@@ -27,6 +28,7 @@ class todoController extends Controller
         $tips = $request -> get('tips');
 
         DB::table('savemoney') -> insert([
+            'type' => $type,
             'date' => $date,
             'item' => $item,
             'name' => $name,
@@ -56,6 +58,7 @@ class todoController extends Controller
 
     public function get_edit_data(Request $request)
     {
+        $type = $request -> get('type');
         $date = $request -> get('date');
         $id = $request ->get('id');
         $item = $request -> get('item');
@@ -66,6 +69,7 @@ class todoController extends Controller
         $test = DB::table('savemoney')
             ->where('id', $id)
             ->update([
+                'type' => $type,
                 'date' => $date,
                 'item' => $item,
                 'name' => $name,

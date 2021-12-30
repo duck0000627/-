@@ -15,6 +15,7 @@ class Savemoney extends Migration
     {
         Schema::create('savemoney', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
             $table->string('date');
             $table->string('item');
             $table->string('name');

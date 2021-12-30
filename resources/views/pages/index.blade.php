@@ -4,6 +4,7 @@
         <table class="table table-dark table-hover">
             <thead>
             <tr>
+                <th>收入/支出</th>
                 <th>日期</th>
                 <th class="fs-2">類別</th>
                 <th>名稱</th>
@@ -13,6 +14,7 @@
             <tbody>
             @foreach($data as $row)
                 <tr>
+                    <td class="col-sm-3">{{$row->type}}</td>
                     <td class="col-sm-3">{{$row->date}}</td>
                     <td class="col-sm-3">{{$row->item}}</td>
                     <td class="col-sm-3">{{$row->name}}</td>
