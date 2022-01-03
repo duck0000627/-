@@ -8,7 +8,7 @@
                 <th>日期</th>
                 <th class="fs-2">類別</th>
                 <th>名稱</th>
-                <th>價錢</th>
+                <th style="white-space: nowrap">價錢</th>
             </tr>
             </thead>
             <tbody>

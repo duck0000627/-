@@ -3,19 +3,27 @@
     <div class="container">
         <form class="form-group" action="{{route('get_edit_data')}}" method="post">
             @csrf
-{{--            <div class="btn-group" role="group" aria-label="Basic outlined example">--}}
-{{--                <button type="button" class="btn btn-outline-primary">收入</button>--}}
-{{--                <button type="button" class="btn btn-outline-primary">支出</button>--}}
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" align="center">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="type" autocomplete="off" checked value="收入"> 收入
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="type" autocomplete="off" value="支出"> 支出
+                </label>
+            </div>
+{{--            <div class="form-group">--}}
+{{--                <select class="form-control form-control-lg selectpicker" id="FormControlSelect1" name="type">--}}
+{{--                    <option name="food">收入</option>--}}
+{{--                    <option name="necessary">支出</option>--}}
+{{--                </select>--}}
 {{--            </div>--}}
             <div class="form-group">
-                <select class="form-control form-control-lg selectpicker" id="FormControlSelect1" name="type">
-                    <option name="food">收入</option>
-                    <option name="necessary">支出</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="h1">日期</label>
-                <input class="form-control col-sm-15" name="date" value="{{$data->date}}">
+                <label class="h1">日期</label><script>
+                    $(function() {
+                        $( "#datepicker" ).datepicker();
+                    });
+                </script>
+                <input class="form-control col-sm-15" name="date"  id="datepicker" value="{{$data -> date}}">
             </div>
             <div class="form-group">
                 <label class="h1">類別</label>
@@ -45,4 +53,7 @@
             <input type="hidden" name="id" value="{{$data->id}}"/>
         </form>
     </div>
+    <script>
+        $('#type').val('{{$data->type}}')
+    </script>
 @endsection

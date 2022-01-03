@@ -3,19 +3,28 @@
     <div class="container">
         <form class="form-group" action="{{route('get_create_data')}}" method="post">
             @csrf
-{{--            <div class="btn-group" role="group" aria-label="Basic example">--}}
-{{--                <button type="button" class="btn btn-secondary" onclick=in>收入</button>--}}
-{{--                <button type="button" class="btn btn-secondary" onclick=out>支出</button>--}}
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="type" autocomplete="off" checked value="收入"> 收入
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="type" autocomplete="off" value="支出"> 支出
+                </label>
+            </div>
+{{--            <div class="form-group">--}}
+{{--                <select class="form-control form-control-lg selectpicker" id="FormControlSelect1" name="type">--}}
+{{--                    <option>收入</option>--}}
+{{--                    <option>支出</option>--}}
+{{--                </select>--}}
 {{--            </div>--}}
             <div class="form-group">
-                <select class="form-control form-control-lg selectpicker" id="FormControlSelect1" name="type">
-                    <option name="food">收入</option>
-                    <option name="necessary">支出</option>
-                </select>
-            </div>
-            <div class="form-group">
                 <label class="h1">日期</label>
-                <input class="form-control col-sm-15" name="date" >
+                <script>
+                    $(function() {
+                        $( "#datepicker" ).datepicker();
+                    });
+                </script>
+                <input class="form-control col-sm-15" name="date"  id="datepicker">
             </div>
             <div class="form-group">
                 <label class="h1">類別</label>
@@ -45,6 +54,11 @@
         </form>
     </div>
 
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker();
+        });
+    </script>
 {{--    <script>--}}
 {{--        function in() {--}}
 {{--            type = --}}
