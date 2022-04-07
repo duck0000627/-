@@ -11,12 +11,6 @@
                     <input type="radio" name="type" autocomplete="off" value="支出"> 支出
                 </label>
             </div>
-{{--            <div class="form-group">--}}
-{{--                <select class="form-control form-control-lg selectpicker" id="FormControlSelect1" name="type">--}}
-{{--                    <option name="food">收入</option>--}}
-{{--                    <option name="necessary">支出</option>--}}
-{{--                </select>--}}
-{{--            </div>--}}
             <div class="form-group">
                 <label class="h1">日期</label><script>
                     $(function() {
