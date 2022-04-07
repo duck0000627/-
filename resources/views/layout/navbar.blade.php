@@ -9,6 +9,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('create')}}">新增</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('chart')}}">圖表</a>
+            </li>
         </ul>
     </div>
 </nav>

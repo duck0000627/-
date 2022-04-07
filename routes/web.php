@@ -24,3 +24,5 @@ Route::get('/edit', [\App\Http\Controllers\TodoController::class, 'edit_data'])
     ->name('edit_data');
 Route::post('/edit', [\App\Http\Controllers\TodoController::class, 'get_edit_data'])
     ->name('get_edit_data');
+
+Route::get('/chart',[\App\Http\Controllers\todoController::class, 'chart'])->name('chart');

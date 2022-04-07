@@ -78,4 +78,9 @@ class todoController extends Controller
             ]);
         return redirect()->route('index');
     }
+
+    public function chart()
+    {
+        return view('pages.chart');
+    }
 }
