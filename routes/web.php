@@ -18,7 +18,7 @@ Route::get('/',[\App\Http\Controllers\todoController::class, 'index'])->name('in
 Route::get('/create',[\App\Http\Controllers\todoController::class, 'create'])->name('create');
 Route::post('/create',[\App\Http\Controllers\todoController::class, 'get_create_data'])->name('get_create_data');
 
-Route::get('/delete/',[\App\Http\Controllers\todoController::class, 'delete_data'])->name('delete_data');
+Route::get('/delete',[\App\Http\Controllers\todoController::class, 'delete_data'])->name('delete_data');
 
 Route::get('/edit', [\App\Http\Controllers\TodoController::class, 'edit_data'])
     ->name('edit_data');
