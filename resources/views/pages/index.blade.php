@@ -41,4 +41,5 @@
             window.location.href = "{{route('edit_data')}}"+"?id="+id;
         }
     </script>
+
 @endsection
