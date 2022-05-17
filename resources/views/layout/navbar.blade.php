@@ -9,10 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{route('create')}}">新增</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('chart')}}">圖表</a>
+                    <a class="nav-link active" href="{{route('create')}}">新增</a>
                 </li>
             </ul>
         </div>
