@@ -9,7 +9,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link active" href="{{route('create')}}">新增</a>
+                    <a class="nav-link active">方案介紹</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{{route('create')}}">訂購方案</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active">常見問題</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active">會員登入/註冊</a>
                 </li>
             </ul>
         </div>
