@@ -1,7 +1,6 @@
 @extends('layout.master')
 @section('content')
     <div class="container">
-        <img src="{{asset('picture/junkbaby_word')}}" height="20px" width="20px">
         <form class="form-group" action="{{route('get_create_data')}}" method="post">
             @csrf
             <div class="form-group">
@@ -42,7 +41,7 @@
                 <select class="form-select" aria-label=".form-select-lg example">
                     <option selected>請選擇地點</option>
                     <option value="1">門口</option>
-                    <option value="2">大樓門口</option>
+                    <option value="2">面交</option>
                 </select>
             </div>
             <div class="form-group">
